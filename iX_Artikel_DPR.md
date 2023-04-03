@@ -188,14 +188,12 @@ $\sigma(z)_i = \frac{e^{z_i}}{\sum _{j=1}^{\left|K\right|} e^{z_j}}$
 Betrachtet man die Ausgabe der oben definierten Ähnlichkeitsfunktion $\text{sim}$ als den unnormalisierten Score $z_i$,
 so kann man diese in die Softmax-Formulierung einsetzen:
 
-$\sigma(z)_i = \frac{e^{\text{sim}(q_i,p _{i}^+)}}{e^{\text{sim}(q_i,p _{i}^+)} + \sum _{j=1}^n{e^{\text{sim}(q_i,p _
-{i,j}^-)}}}$
+$\sigma(z) _ i = \frac{e^{\text{sim}(q _ i,p _ {i}^+)}}{e^{\text{sim}(q _ i,p _ {i}^+)} + \sum _ {j=1}^n{e^{\text{sim}(q _ i,p _ {i,j}^-)}}}$
 
 Die übliche Methode, eine Wahrscheinlichkeit zu maximieren, ist, die *Negative Log Likelihood (NLL)* zu minimieren. Und
 damit gelangt man zur Formulierung des Loss $L$:
 
-$L(q_i, p{ _i}^+, p _{i, 1}^-, ..., p _{i, n}^-)=-\log(\sigma(z) _i)=-\log\frac{e^{\text{sim}(q_i,p _{i}^+)}}{e^{\text{sim}(
-q_i,p _{i}^+)} + \sum _{j=1}^n{e^{\text{sim}(q_i,p _{i,j}^-)}}}$
+$L(q _ i, p{ _ i}^+, p _ {i, 1}^-, ..., p _ {i, n}^-)=-\log(\sigma(z) _ i)=-\log\frac{e^{\text{sim}(q _ i,p  _ {i}^+)}}{e^{\text{sim}(q _ i,p _ {i}^+)} + \sum _ {j=1}^n{e^{\text{sim}(q _ i,p _ {i,j}^-)}}}$
 
 Am besten wäre es, für jedes Anfrage/Dokument-Paar $(q_i, p{ _i}^+,)$ alle anderen Dokumente aus dem vorliegenden
 Datensatz als Negativbeispiele $p _{i,j}^-$ zu verwenden. Dies ist aber mit Hinblick auf den Rechen- und Speicheraufwand
