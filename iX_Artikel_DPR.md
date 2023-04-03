@@ -167,7 +167,7 @@ zu finden.
 
 Dieses Ranking-Problem kann durch eine raffinierte Formulierung als Multi-Klassifikationsproblem betrachtet werden.
 Gegeben seien der Anfragevektor $q_i$ mit dem Soll-Dokumentenvektor $p_i^+$ und eine Menge an irrelevanten
-Dokumentenvektoren $p_{i,j}^-$. Die Menge aller gegebenen Dokumentenvektoren ist dann $P_i = {p_i^+, p_{i, 1}^-, \dots, p_{i, n}^- }$. Nun kann eine Wahrscheinlichkeit formuliert werden, die in etwa 
+Dokumentenvektoren $p_{i,j}^-$. Die Menge aller gegebenen Dokumentenvektoren ist dann $P_i = {p_i^+, p_{i, 1}^-, ..., p_{i, n}^- }$. Nun kann eine Wahrscheinlichkeit formuliert werden, die in etwa 
 folgendes 
 aussagt: Wie wahrscheinlich
 ist es, dass ein Klassifikator in Anbetracht einer Anfrage $q_i$ den korrekten Soll-Dokumentenvektor $p_i^+$ aus der
