@@ -183,7 +183,7 @@ Wahrscheinlichkeit $\sigma (z)_i$, dass die Klasse $k_i$ aus der Menge mögliche
 ausgewählt wird, berechnet sich gemäß der
 Softmax-Formulierung wie folgt:
 
-$\sigma(z)_i = \frac{e^{z_i}}{\sum_{j=1}^{\left|K\right|} e^{z_j}}$
+$\sigma(z)_i$
 
 Betrachtet man die Ausgabe der oben definierten Ähnlichkeitsfunktion $\text{sim}$ als den unnormalisierten Score $z_i$,
 so kann man diese in die Softmax-Formulierung einsetzen:
