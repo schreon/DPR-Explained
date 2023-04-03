@@ -184,7 +184,7 @@ Zur Modellierung einer Wahrscheinlichkeitsverteilung über mehrere Klassen eigne
 ein Vektor $z$ aus $|K|$ reellen Zahlen, die jeweils einen unnormalisierten Score $z_i$ für die Wahrscheinlichkeit einer
 Klasse $k_i \in K$ repräsentieren, in eine Wahrscheinlichkeitsverteilung umgewandelt. Die Wahrscheinlichkeit 
 
-$ \sigma(z) _ i $
+$\sigma (z)$
 
 , dass die Klasse $k_i$ aus der Menge möglicher Klassen $K$ ausgewählt wird, berechnet sich gemäß der
 Softmax-Formulierung wie folgt:
