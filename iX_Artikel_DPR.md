@@ -169,7 +169,7 @@ Dieses Ranking-Problem kann durch eine raffinierte Formulierung als Multi-Klassi
 Gegeben seien der Anfragevektor $q_i$ mit dem Soll-Dokumentenvektor $p_i^+$ und eine Menge an irrelevanten
 Dokumentenvektoren $p_{i,j}^-$. Die Menge aller gegebenen Dokumentenvektoren ist dann
 
-$P_i = {p_i^+, p_{i,1}^-,}$.
+$P_i = {p_i^+, p_{i,1}^-, \dots}$.
 
 Nun kann eine Wahrscheinlichkeit formuliert werden, die in etwa 
 folgendes 
