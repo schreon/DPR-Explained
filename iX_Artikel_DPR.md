@@ -188,19 +188,19 @@ $\sigma(z)_i = \frac{e^{z_i}}{\sum _{j=1}^{\left|K\right|} e^{z_j}}$
 Betrachtet man die Ausgabe der oben definierten Ähnlichkeitsfunktion $\text{sim}$ als den unnormalisierten Score $z_i$,
 so kann man diese in die Softmax-Formulierung einsetzen:
 
-$\sigma(z)_i = \frac{e^{\text{sim}(q_i,p_{i}^+)}}{e^{\text{sim}(q_i,p_{i}^+)} + \sum_{j=1}^n{e^{\text{sim}(q_i,p_
+$\sigma(z)_i = \frac{e^{\text{sim}(q_i,p _{i}^+)}}{e^{\text{sim}(q_i,p _{i}^+)} + \sum _{j=1}^n{e^{\text{sim}(q_i,p _
 {i,j}^-)}}}$
 
 Die übliche Methode, eine Wahrscheinlichkeit zu maximieren, ist, die *Negative Log Likelihood (NLL)* zu minimieren. Und
 damit gelangt man zur Formulierung des Loss $L$:
 
-$L(q_i, p{_i}^+, p_{i, 1}^-, ..., p_{i, n}^-)=-\log(\sigma(z)_i)=-\log\frac{e^{\text{sim}(q_i,p_{i}^+)}}{e^{\text{sim}(
-q_i,p_{i}^+)} + \sum_{j=1}^n{e^{\text{sim}(q_i,p_{i,j}^-)}}}$
+$L(q_i, p{ _i}^+, p _{i, 1}^-, ..., p _{i, n}^-)=-\log(\sigma(z) _i)=-\log\frac{e^{\text{sim}(q_i,p _{i}^+)}}{e^{\text{sim}(
+q_i,p _{i}^+)} + \sum _{j=1}^n{e^{\text{sim}(q_i,p _{i,j}^-)}}}$
 
-Am besten wäre es, für jedes Anfrage/Dokument-Paar $(q_i, p{_i}^+,)$ alle anderen Dokumente aus dem vorliegenden
-Datensatz als Negativbeispiele $p_{i,j}^-$ zu verwenden. Dies ist aber mit Hinblick auf den Rechen- und Speicheraufwand
+Am besten wäre es, für jedes Anfrage/Dokument-Paar $(q_i, p{ _i}^+,)$ alle anderen Dokumente aus dem vorliegenden
+Datensatz als Negativbeispiele $p _{i,j}^-$ zu verwenden. Dies ist aber mit Hinblick auf den Rechen- und Speicheraufwand
 nicht machbar. Daher verwendet man in der Praxis einen Trick, bei dem nur ein Bruchteil der Dokumente zur selben Zeit
-geladen und zur Berechnung des Loss herangezogen wird. Dabei werden gleich mehrere Anfrage/Dokument-Paare $(q_i, p{_
+geladen und zur Berechnung des Loss herangezogen wird. Dabei werden gleich mehrere Anfrage/Dokument-Paare $(q_i, p{ _
 i}^+)$ aus dem Gesamtdatensatz ausgewählt. Diese formen dann einen sogenannten *Minibatch*. Nun werden für jede Anfrage
 $q_i$ aus diesem Minibatch alle anderen Dokumente $p{_j}^+$ als Negativdokumente für $q_i$ betrachtet. Diese bezeichnet
 man als *in-batch negatives*. Der Liste an Negativdokumenten können zusätzlich noch sogenannte *hard negatives*
